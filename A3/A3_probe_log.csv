@@ -1,0 +1,291 @@
+run,prompt,model,version,timestamp,output,verified,notes
+1,"You are analyzing 20 responses to a student club survey asking, ""Would you attend another club event just like this?""Classify each response based on its meaning into Yes, No, Maybe, or Missing. Use these rules:
+
+Yes: Clear Agreement, willingness, or enthusiasm.
+No: Clear Refusal, Unwillingness or frustration.
+Maybe: Uncertainty or conditional answers.
+Missing: Empty responses.
+First, show the classification of all 20 responses. Then produce a summary table with the count and percentage of ALL 20 responses in each category. Finally, calculate the percentage of Yes responses among non-missing responses only. Round percentages to one decimal place and state the denominators.Data (CSV):
+
+Data (CSV):
+id,response
+1,""Sure, love to""
+2,""yes""
+3,""depends""
+4,""looking forward to new events!""
+5,""not sure""
+6,""""
+7,""N/A""
+8,""no if it's still the same""
+9,""if it's better I'll consider""
+10,""Not sure""
+11,""Yessss!!""
+12,""can't wait""
+13,""absolutely""
+14,""""
+15,""yes""
+16,""I'd love to""
+17,""""
+18,""probably not""
+19,""it depends""
+20,""no"" ",Gemini,3.1 Pro High,"3:10pm, Nov/2/2026","""Sure, love to"" — Yes
+""yes"" — Yes
+""depends"" — Maybe
+""looking forward to new events!"" — Yes
+""not sure"" — Maybe
+"""" — Missing
+""N/A"" — Missing
+""no if it's still the same"" — No
+""if it's better I'll consider"" — Maybe
+""Not sure"" — Maybe
+""Yessss!!"" — Yes
+""can't wait"" — Yes
+""absolutely"" — Yes
+"""" — Missing
+""yes"" — Yes
+""I'd love to"" — Yes
+"""" — Missing
+""probably not"" — No
+""it depends"" — Maybe
+""no"" — No
+
+Category	Count	Percentage
+Yes	8	40.0%
+Maybe	5	25.0%
+Missing	4	20.0%
+No	3	15.0%
+To calculate the percentage of Yes responses among non-missing data, the 4 Missing responses are subtracted from the total dataset, leaving a denominator of 16 valid responses. Dividing the 8 Yes responses by this denominator of 16 results in exactly 50.0%. The initial summary table percentages use the full denominator of 20 total responses.",correct,"Matches all 20 predefined labels; counts, percentages, and denominators correct."
+2,"You are analyzing 20 responses to a student club survey asking, ""Would you attend another club event just like this?""Classify each response based on its meaning into Yes, No, Maybe, or Missing. Use these rules:
+
+Yes: Clear Agreement, willingness, or enthusiasm.
+No: Clear Refusal, Unwillingness or frustration.
+Maybe: Uncertainty or conditional answers.
+Missing: Empty responses.
+First, show the classification of all 20 responses. Then produce a summary table with the count and percentage of ALL 20 responses in each category. Finally, calculate the percentage of Yes responses among non-missing responses only. Round percentages to one decimal place and state the denominators.Data (CSV):
+
+Data (CSV):
+id,response
+1,""Sure, love to""
+2,""yes""
+3,""depends""
+4,""looking forward to new events!""
+5,""not sure""
+6,""""
+7,""N/A""
+8,""no if it's still the same""
+9,""if it's better I'll consider""
+10,""Not sure""
+11,""Yessss!!""
+12,""can't wait""
+13,""absolutely""
+14,""""
+15,""yes""
+16,""I'd love to""
+17,""""
+18,""probably not""
+19,""it depends""
+20,""no"" ",Gemini,3.1 Pro High,"3:12pm, Nov/2/2026","Classification of Responses
+""Sure, love to"" — Yes
+""yes"" — Yes
+""depends"" — Maybe
+""looking forward to new events!"" — Yes
+""not sure"" — Maybe
+"""" — Missing
+""N/A"" — Missing
+""no if it's still the same"" — No
+""if it's better I'll consider"" — Maybe
+""Not sure"" — Maybe
+""Yessss!!"" — Yes
+""can't wait"" — Yes
+""absolutely"" — Yes
+"""" — Missing
+""yes"" — Yes
+""I'd love to"" — Yes
+"""" — Missing
+""probably not"" — No
+""it depends"" — Maybe
+""no"" — No
+
+Category Summary
+
+Category	Count	Percentage
+Yes	8	40.0%
+Maybe	5	25.0%
+Missing	4	20.0%
+No	3	15.0%
+Excluding the 4 missing responses leaves a denominator of 16 valid responses. With 8 ""Yes"" responses out of this group, the positive response rate among non-missing answers is exactly 50.0% (8/16).",correct,"Matches all 20 predefined labels; counts, percentages, and denominators correct."
+3,"You are analyzing 20 responses to a student club survey asking, ""Would you attend another club event just like this?""Classify each response based on its meaning into Yes, No, Maybe, or Missing. Use these rules:
+
+Yes: Clear Agreement, willingness, or enthusiasm.
+No: Clear Refusal, Unwillingness or frustration.
+Maybe: Uncertainty or conditional answers.
+Missing: Empty responses.
+First, show the classification of all 20 responses. Then produce a summary table with the count and percentage of ALL 20 responses in each category. Finally, calculate the percentage of Yes responses among non-missing responses only. Round percentages to one decimal place and state the denominators.Data (CSV):
+
+Data (CSV):
+id,response
+1,""Sure, love to""
+2,""yes""
+3,""depends""
+4,""looking forward to new events!""
+5,""not sure""
+6,""""
+7,""N/A""
+8,""no if it's still the same""
+9,""if it's better I'll consider""
+10,""Not sure""
+11,""Yessss!!""
+12,""can't wait""
+13,""absolutely""
+14,""""
+15,""yes""
+16,""I'd love to""
+17,""""
+18,""probably not""
+19,""it depends""
+20,""no"" ",Gemini,3.1 Pro High,"3:20pm, Nov/2/2026","Classification of Responses
+""Sure, love to"" — Yes
+""yes"" — Yes
+""depends"" — Maybe
+""looking forward to new events!"" — Yes (shows enthusiasm/willingness)
+""not sure"" — Maybe
+"""" — Missing
+""N/A"" — Missing (treated as an empty/null response)
+""no if it's still the same"" — No (since the prompt asks about an event ""just like this,"" this is a clear refusal)
+""if it's better I'll consider"" — Maybe (conditional)
+""Not sure"" — Maybe
+""Yessss!!"" — Yes
+""can't wait"" — Yes
+""absolutely"" — Yes
+"""" — Missing
+""yes"" — Yes
+""I'd love to"" — Yes
+"""" — Missing
+""probably not"" — No
+""it depends"" — Maybe
+""no"" — No
+
+Summary of All Responses
+
+Category	Count	Percentage (Denominator: 20)
+Yes	8	40.0%
+No	3	15.0%
+Maybe	5	25.0%
+Missing	4	20.0%
+Percentage of ""Yes"" Among Non-Missing Responses
+
+Yes count: 8
+
+Non-missing denominator: 16 (20 total responses − 4 missing)
+
+Calculation: 8 ÷ 16 = 50.0%",correct,"Matches all 20 predefined labels; counts, percentages, and denominators correct."
+4,"You are analyzing 20 responses to a student club survey asking, ""Would you attend another club event just like this?""Classify each response based on its meaning into Yes, No, Maybe, or Missing. Use these rules:
+
+Yes: Clear Agreement, willingness, or enthusiasm.
+No: Clear Refusal, Unwillingness or frustration.
+Maybe: Uncertainty or conditional answers.
+Missing: Empty responses.
+First, show the classification of all 20 responses. Then produce a summary table with the count and percentage of ALL 20 responses in each category. Finally, calculate the percentage of Yes responses among non-missing responses only. Round percentages to one decimal place and state the denominators.Data (CSV):
+
+Data (CSV):
+id,response
+1,""Sure, love to""
+2,""yes""
+3,""depends""
+4,""looking forward to new events!""
+5,""not sure""
+6,""""
+7,""N/A""
+8,""no if it's still the same""
+9,""if it's better I'll consider""
+10,""Not sure""
+11,""Yessss!!""
+12,""can't wait""
+13,""absolutely""
+14,""""
+15,""yes""
+16,""I'd love to""
+17,""""
+18,""probably not""
+19,""it depends""
+20,""no"" ",ChatGPT,6 High,"3:15pm, Nov/2/2026","1. Classification of all 20 responses
+ID	Response	Classification
+1	Sure, love to	Yes
+2	yes	Yes
+3	depends	Maybe
+4	looking forward to new events!	Yes
+5	not sure	Maybe
+6	(empty)	Missing
+7	N/A	Missing
+8	no if it's still the same	No
+9	if it's better I'll consider	Maybe
+10	Not sure	Maybe
+11	Yessss!!	Yes
+12	can't wait	Yes
+13	absolutely	Yes
+14	(empty)	Missing
+15	yes	Yes
+16	I'd love to	Yes
+17	(empty)	Missing
+18	probably not	Maybe
+19	it depends	Maybe
+20	no	No
+
+Notes on ambiguous responses:
+- ID 7 — Missing: ""N/A"" provides no usable answer, so it is treated as missing.
+- ID 8 — No: The respondent explicitly rejects attending if the event remains the same, which matches the question's ""just like this"" condition.
+- ID 18 — Maybe: ""Probably not"" expresses uncertainty rather than an unconditional refusal.
+2. Summary of all 20 responses
+Response distribution
+All 20 survey responses
+
+
+
+Maybe
+
+Missing
+
+No
+
+Yes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Category	Count	Percentage (out of 20)
+Yes	8	40.0%
+No	2	10.0%
+Maybe	6	30.0%
+Missing	4	20.0%
+Total	20	100.0%
+
+Denominator: 20 total survey responses, including missing responses.
+3. Yes percentage among non-missing responses
+Non-missing responses:
+\[
+20-4=16
+\]
+
+Yes responses among non-missing responses:
+\[
+\frac{8}{16}\times100=\boxed{50.0\%}
+\]
+
+Yes rate among non-missing responses
+50.0%
+
+
+
+
+8 Yes responses ÷ 16 non-missing responses
+Final result: 40.0% of all 20 respondents answered Yes, while 50.0% of the 16 respondents who provided usable answers answered Yes.",wrong,"ID 18 (""probably not"") classified as Maybe rather than predefined No; No=2 and Maybe=6 instead of 3 and 5. Other classifications and calculations correct. The phrase is interpretively ambiguous."
